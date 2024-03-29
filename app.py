@@ -105,3 +105,5 @@ def shop():
 
 if __name__ == "__main__":
     app.run(debug=True,host="0.0.0.0", port=env.get("PORT", 3000))
+
+#Thank you for giving us this opportunity for particpating in hakxite1.0
