@@ -59,6 +59,9 @@ def logout():
 @app.route("/")
 def home():
     return render_template("index.html", session=session.get('user'), pretty=json.dumps(session.get('user'), indent=4))
+@app.route("/intro")
+def intro():
+    return render_template("intro_page.html")
 
 @app.route("/contact")
 def contact():

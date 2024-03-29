@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <title>
+        AIChain
+    </title><!-- Behavioral Meta Data -->
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"><!-- Core Meta Data -->
+    <meta content="ThemeWagon" name="author">
+    <meta content="The most spectacular coming soon template!" name="description">
+    <meta content="Comming Soon, Responsive, Landing Page, One Page" name="keywords"><!-- Open Graph Meta Data -->
+    <meta content="The most spectacular coming soon template!">
+    <meta content="ThemeWagon">
+    <meta content="ThemeWagon">
+    <meta content="website">
+    <meta content="index.html"><!-- Twitter Card Meta Data -->
+    <meta content="summary" name="twitter:card">
+    <meta content="@themewagon" name="twitter:site">
+    <meta content="@themewagon" name="twitter:creator">
+    <meta content="ThemeWagon" name="twitter:title">
+    <meta content="Imminent - The most spectacular coming soon template!" name="twitter:description">
+
+    <link href="{{ url_for('static', filename='img/favicon.png') }}" rel="icon">
+
+
+
+    <!-- CSS -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,900' rel='stylesheet' type='text/css'><!-- Styles -->
+    <link href="{{ url_for('static', filename='intro_page/css/loader.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ url_for('static', filename='intro_page/css/normalize.css') }}" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='intro_page/css/font-awesome.min.css') }}">
+    <link href="{{ url_for('static', filename='intro_page/css/style.css') }}" rel="stylesheet" type="text/css">
+
+
+    <script src="{{ url_for('static', filename='intro_page/js/jquery.js') }}"></script>
+</head>
+
+<body>
+    <div class="preloader">
+        <div class="loading">
+            <h2>
+                Loading...
+            </h2>
+            <span class="progress"></span>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <ul class="scene unselectable" data-friction-x="0.1" data-friction-y="0.1" data-scalar-x="25"
+            data-scalar-y="15" id="scene">
+            <li class="layer" data-depth="0.00">
+            </li>
+            <!-- BG -->
+
+            <li class="layer" data-depth="0.10">
+                <div class="background">
+                </div>
+            </li>
+
+            <!-- Hero -->
+
+            <li class="layer" data-depth="0.20">
+                <div class="title">
+                    <h2>
+                        AIChain
+                    </h2>
+                    <span class="line"></span>
+                </div>
+            </li>
+
+            <li class="layer" data-depth="0.25">
+
+            </li>
+
+            <li class="layer" data-depth="0.30">
+
+            </li>
+            <!-- Flakes -->
+
+            <li class="layer" data-depth="0.40">
+
+            </li>
+
+            <li class="layer" data-depth="0.50">
+                <div class="depth-2 flake1">
+                    <img alt="flake" src="{{ url_for('static', filename='intro_page/images/flakes/depth2/flakes1.png') }}">
+                </div>
+
+                <div class="depth-2 flake2">
+                    <img alt="flake" src="{{ url_for('static', filename='intro_page/images/flakes/depth2/flakes2.png') }}">
+                </div>
+            </li>
+
+            <li class="layer" data-depth="0.60">
+
+            </li>
+
+            <li class="layer" data-depth="0.80">
+                <div class="depth-4">
+                    <img alt="flake" src="{{ url_for('static', filename='intro_page/images/flakes/depth4/flakes.png') }}">
+                </div>
+            </li>
+
+            <li class="layer" data-depth="1.00">
+                <div class="depth-5">
+                    <img alt="flake" src="{{ url_for('static', filename='intro_page/images/flakes/depth5/flakes.png') }}">
+                </div>
+            </li>
+            <li class="layer" data-depth="1.00">
+            </li>
+            <!-- Contact -->
+
+            <li class="layer" data-depth="0.20">
+                <div class="contact">
+
+                    Made by <a href="https://www.linkedin.com/in/adhithyanvp/" target="_blank">Adhityan vp</a>
+                    <a class="mail" href="mailto:info@example.com?subject=Hi%20ThemeWagon!">adhivp910@gmail.com</a>
+                </div>
+            </li>
+        </ul>
+
+
+    </div>
+
+    <!-- Javascript -->
+    <script src="{{ url_for('static', filename='intro_page/js/plugins.js') }}"></script>
+    <script src="{{ url_for('static', filename='intro_page/js/jquery.countdown.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='intro_page/js/main.js') }}"></script>
+
+</body>
+
+</html>
