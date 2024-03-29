@@ -28,6 +28,7 @@ oauth.register(
     server_metadata_url=f'https://{env.get("AUTH0_DOMAIN")}/.well-known/openid-configuration'
 )
 
+
 @app.route("/login")
 def login():
     return oauth.auth0.authorize_redirect(
@@ -38,7 +39,7 @@ def login():
 def callback():
     token = oauth.auth0.authorize_access_token()
     session["user"] = token
-    return redirect("/")
+    return redirect(url_for("home_after_login"))
 
 @app.route("/logout")
 def logout():
@@ -62,6 +63,42 @@ def home():
 @app.route("/contact")
 def contact():
     return render_template("contact.html")
+
+@app.route("/home_after_login")
+def home_after_login():
+    if session.get("user"):
+        return render_template("home_after_login.html")
+    else:
+        return redirect(url_for("home"))
+
+@app.route("/product-details")
+def product_details():
+    if session.get("user"):
+        return render_template("product-details.html")
+    else:
+        return redirect(url_for("home"))
+
+@app.route("/cart")
+def cart():
+    if session.get("user"):
+        return render_template("cart.html")
+    else:
+        return redirect(url_for("home"))
+
+@app.route("/checkout")
+def checkout():
+    if session.get("user"):
+        return render_template("checkout.html")
+    else:
+        return redirect(url_for("home"))
+
+@app.route("/shop")
+def shop():
+    if session.get("user"):
+        return render_template("shop.html")
+    else:
+        return redirect(url_for("home"))
+
 
 if __name__ == "__main__":
     app.run(debug=True,host="0.0.0.0", port=env.get("PORT", 3000))
